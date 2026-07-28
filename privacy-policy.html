@@ -2,53 +2,200 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Privacy Policy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Rage Rebirth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  body { font-family: Arial, Helvetica, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
-  h1 { font-size: 28px; }
-  h2 { font-size: 20px; margin-top: 30px; }
-  p, li { font-size: 15px; }
-  .updated { color: #666; font-size: 14px; margin-bottom: 30px; }
+  :root{
+    --bg-void:#0a0d13;
+    --bg-panel:#141a24;
+    --stone:#242b38;
+    --stone-line:#333c4d;
+    --ember:#ff6a35;
+    --crystal:#5fd8ce;
+    --bone:#ece7dc;
+    --muted:#8891a3;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg-void); color:var(--bone); font-family:'Inter',sans-serif;}
+  h1,h2{font-family:'Cinzel',serif;}
+  a{color:var(--crystal); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 6vw;
+    background:rgba(10,13,19,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--stone-line);
+  }
+  .logo{font-family:'Cinzel',serif; font-weight:800; font-size:1.1rem; letter-spacing:0.08em; color:var(--bone);}
+  .logo span{color:var(--ember);}
+  .nav-links{display:flex; gap:2.2rem; font-size:0.85rem; letter-spacing:0.04em;}
+  .nav-links a{color:var(--muted); text-decoration:none; transition:color .2s;}
+  .nav-links a:hover{color:var(--crystal); text-decoration:none;}
+  .nav-links a.active{color:var(--ember);}
+
+  .page-header{
+    padding:9rem 6vw 3rem;
+    max-width:800px; margin:0 auto;
+    border-bottom:1px solid var(--stone-line);
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace; font-size:0.75rem; letter-spacing:0.2em;
+    color:var(--ember); text-transform:uppercase; display:block; margin-bottom:1rem;
+  }
+  .page-header h1{font-size:clamp(2rem,4vw,2.8rem); color:var(--bone);}
+  .updated{
+    font-family:'JetBrains Mono',monospace; font-size:0.82rem; color:var(--muted); margin-top:1rem;
+  }
+
+  .layout{
+    max-width:800px; margin:0 auto; padding:3.5rem 6vw 6rem;
+    display:grid; grid-template-columns:200px 1fr; gap:3rem;
+  }
+  .toc{
+    position:sticky; top:100px; align-self:start;
+    font-family:'JetBrains Mono',monospace; font-size:0.8rem;
+  }
+  .toc-label{color:var(--muted); letter-spacing:0.15em; text-transform:uppercase; font-size:0.7rem; margin-bottom:1rem; display:block;}
+  .toc a{
+    display:block; color:var(--muted); padding:0.35rem 0; border-left:2px solid var(--stone-line);
+    padding-left:0.8rem; text-decoration:none; transition:all .2s;
+  }
+  .toc a:hover{color:var(--crystal); border-left-color:var(--crystal);}
+
+  .policy-content section{
+    margin-bottom:2.6rem; scroll-margin-top:100px;
+  }
+  .policy-content h2{
+    font-size:1.25rem; color:var(--bone); margin-bottom:1rem;
+    display:flex; align-items:baseline; gap:0.6rem;
+  }
+  .policy-content h2 .num{
+    font-family:'JetBrains Mono',monospace; color:var(--ember); font-size:0.9rem;
+  }
+  .policy-content p{color:var(--muted); line-height:1.75; font-size:0.96rem; margin-bottom:0.9rem;}
+  .policy-content ul{margin:0.8rem 0 0.8rem 1.3rem; color:var(--muted); line-height:1.75; font-size:0.96rem;}
+  .policy-content li{margin-bottom:0.6rem;}
+  .policy-content li strong{color:var(--bone);}
+
+  .contact-box{
+    background:var(--bg-panel); border:1px solid var(--stone-line); border-radius:6px;
+    padding:1.6rem 1.8rem; margin-top:0.5rem;
+  }
+  .contact-box p{margin-bottom:0; color:var(--bone);}
+  .contact-box a{color:var(--crystal);}
+
+  footer{
+    padding:3rem 6vw; border-top:1px solid var(--stone-line);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;
+    color:var(--muted); font-size:0.85rem; max-width:800px; margin:0 auto;
+  }
+
+  @media(max-width:760px){
+    .layout{grid-template-columns:1fr;}
+    .toc{position:static; margin-bottom:1rem;}
+    .nav-links{gap:1.2rem; font-size:0.78rem;}
+  }
 </style>
 </head>
 <body>
 
-<h1>Privacy Policy</h1>
-<p class="updated">Last updated: July 26, 2026</p>
+<nav>
+  <div class="logo">RAGE<span>REBIRTH</span></div>
+  <div class="nav-links">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#games">Our Games</a>
+    <a href="privacy-policy.html" class="active">Privacy Policy</a>
+  </div>
+</nav>
 
-<p>This Privacy Policy describes how [RageRebirth] ("we," "us," or "our") handles information in connection with our mobile game(s) (the "App"), available on Google Play. The App is intended for a general, worldwide audience and can be downloaded and played by anyone, in any country.</p>
+<div class="page-header">
+  <span class="eyebrow">// Legal</span>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: July 26, 2026</p>
+</div>
 
-<h2>1. Data We Collect</h2>
-<p>We do not directly collect, store, or share any personal data through the App. We have not built any account system, server, or database of our own. Any data collection that occurs is performed by third-party services integrated into the App, as described below.</p>
+<div class="layout">
+  <div class="toc">
+    <span class="toc-label">On this page</span>
+    <a href="#data-we-collect">Data We Collect</a>
+    <a href="#third-party">Third-Party Services</a>
+    <a href="#children">Children's Privacy</a>
+    <a href="#choices">Your Choices</a>
+    <a href="#security">Data Security</a>
+    <a href="#international">International Use</a>
+    <a href="#liability">Disclaimer</a>
+    <a href="#changes">Changes</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-<h2>2. Third-Party Services</h2>
-<p>The App uses the following third-party services, which may independently collect and process data in accordance with their own privacy policies:</p>
-<ul>
-  <li><strong>Google AdMob</strong> – used to display advertisements within the App. AdMob and its advertising partners may collect information such as device identifiers, IP address, general location, and app usage data to serve ads, including personalized ads where permitted. Learn more at <a href="https://policies.google.com/technologies/ads" target="_blank">Google's Ads Policy</a> and <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</li>
-  <li><strong>Google Play Billing (In-App Purchases)</strong> – purchases made in the App are processed entirely by Google Play. We do not receive or store your payment information; this is handled by Google under its own <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>.</li>
-  <li><strong>Google Play Games Services</strong> – features such as leaderboards, achievements, and sign-in are handled automatically through your existing Google Play Games account. We do not manage, store, or have access to this data ourselves; it is governed by Google's <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>.</li>
-</ul>
+  <div class="policy-content">
+    <p style="margin-bottom:2rem;">This Privacy Policy describes how RageRebirth ("we," "us," or "our") handles information in connection with our mobile game(s) (the "App"), available on Google Play. The App is intended for a general, worldwide audience and can be downloaded and played by anyone, in any country.</p>
 
-<h2>3. Children's Privacy</h2>
-<p>The App is not directed at collecting personal information from children. Where the App is made available to a general audience, any ads served may be configured (via Google Play Console / AdMob settings) to comply with applicable child-directed treatment requirements, such as the Children's Online Privacy Protection Act (COPPA) and Google Play's Families Policy, as configured by the developer in the Google Play Console. We do not knowingly collect personal data from anyone directly, regardless of age.</p>
+    <section id="data-we-collect">
+      <h2><span class="num">01</span> Data We Collect</h2>
+      <p>We do not directly collect, store, or share any personal data through the App. We have not built any account system, server, or database of our own. Any data collection that occurs is performed by third-party services integrated into the App, as described below.</p>
+    </section>
 
-<h2>4. Your Choices</h2>
-<p>You can control ad personalization and data collection related to advertising through your device's ad settings (e.g., Google Settings → Ads, or Android Settings → Privacy → Ads) and through Google's own <a href="https://adssettings.google.com" target="_blank">Ads Settings</a> page. Any data related to your Google Play Games or Google account is managed through your Google Account settings.
+    <section id="third-party">
+      <h2><span class="num">02</span> Third-Party Services</h2>
+      <p>The App uses the following third-party services, which may independently collect and process data in accordance with their own privacy policies:</p>
+      <ul>
+        <li><strong>Google AdMob</strong> — used to display advertisements within the App. AdMob and its advertising partners may collect information such as device identifiers, IP address, general location, and app usage data to serve ads, including personalized ads where permitted. Learn more at <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's Ads Policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+        <li><strong>Google Play Billing (In-App Purchases)</strong> — purchases made in the App are processed entirely by Google Play. We do not receive or store your payment information; this is handled by Google under its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</li>
+        <li><strong>Google Play Games Services</strong> — features such as leaderboards, achievements, and sign-in are handled automatically through your existing Google Play Games account. We do not manage, store, or have access to this data ourselves; it is governed by Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</li>
+      </ul>
+    </section>
 
-<h2>5. Data Security</h2>
-<p>Since we do not collect or store personal data ourselves, we hold no user data that could be exposed. Any data handled by AdMob, Google Play Billing, or Google Play Games Services is secured according to Google's own security practices.</p>
+    <section id="children">
+      <h2><span class="num">03</span> Children's Privacy</h2>
+      <p>The App is not directed at collecting personal information from children. Where the App is made available to a general audience, any ads served may be configured (via Google Play Console / AdMob settings) to comply with applicable child-directed treatment requirements, such as the Children's Online Privacy Protection Act (COPPA) and Google Play's Families Policy, as configured by the developer in the Google Play Console. We do not knowingly collect personal data from anyone directly, regardless of age.</p>
+    </section>
 
-<h2>6. International Use</h2>
-<p>The App is available to users worldwide. By using the App, you acknowledge that any data processed by the third-party services above may be transferred to and processed in countries other than your own, in accordance with those providers' own policies.</p>
+    <section id="choices">
+      <h2><span class="num">04</span> Your Choices</h2>
+      <p>You can control ad personalization and data collection related to advertising through your device's ad settings (e.g., Google Settings → Ads, or Android Settings → Privacy → Ads) and through Google's own <a href="https://adssettings.google.com" target="_blank" rel="noopener">Ads Settings</a> page. Any data related to your Google Play Games or Google account is managed through your Google Account settings.</p>
+    </section>
 
-<h2>7. No Liability / Disclaimer</h2>
-<p>The App is provided "as is," without warranty of any kind, express or implied. We do not guarantee uninterrupted or error-free operation of the App. To the fullest extent permitted by applicable law, we disclaim all liability for any damages, losses, or issues arising from your use of the App, including but not limited to any data handling performed by third-party services such as Google AdMob, Google Play Billing, or Google Play Games Services. Your use of the App is at your own discretion and risk.</p>
+    <section id="security">
+      <h2><span class="num">05</span> Data Security</h2>
+      <p>Since we do not collect or store personal data ourselves, we hold no user data that could be exposed. Any data handled by AdMob, Google Play Billing, or Google Play Games Services is secured according to Google's own security practices.</p>
+    </section>
 
-<h2>8. Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. Continued use of the App after changes are posted constitutes acceptance of the updated policy.</p>
+    <section id="international">
+      <h2><span class="num">06</span> International Use</h2>
+      <p>The App is available to users worldwide. By using the App, you acknowledge that any data processed by the third-party services above may be transferred to and processed in countries other than your own, in accordance with those providers' own policies.</p>
+    </section>
 
-<h2>9. Contact Us</h2>
-<p>If you have questions about this Privacy Policy, you can contact us at: [spikycastle@gmail.com]</p>
+    <section id="liability">
+      <h2><span class="num">07</span> No Liability / Disclaimer</h2>
+      <p>The App is provided "as is," without warranty of any kind, express or implied. We do not guarantee uninterrupted or error-free operation of the App. To the fullest extent permitted by applicable law, we disclaim all liability for any damages, losses, or issues arising from your use of the App, including but not limited to any data handling performed by third-party services such as Google AdMob, Google Play Billing, or Google Play Games Services. Your use of the App is at your own discretion and risk.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">08</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. Continued use of the App after changes are posted constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">09</span> Contact Us</h2>
+      <div class="contact-box">
+        <p>Questions about this Privacy Policy? Reach us at <a href="mailto:spikycastle@gmail.com">spikycastle@gmail.com</a></p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer>
+  <div>© 2026 Rage Rebirth. All rights reserved.</div>
+  <div><a href="mailto:spikycastle@gmail.com" style="color:var(--muted);">Contact</a></div>
+</footer>
 
 </body>
 </html>
