@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Rage Rebirth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-void:#0a0d13;
+    --bg-panel:#141a24;
+    --stone:#242b38;
+    --stone-line:#333c4d;
+    --ember:#ff6a35;
+    --crystal:#5fd8ce;
+    --bone:#ece7dc;
+    --muted:#8891a3;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg-void); color:var(--bone); font-family:'Inter',sans-serif;}
+  h1,h2{font-family:'Cinzel',serif;}
+  a{color:var(--crystal); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 6vw;
+    background:rgba(10,13,19,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--stone-line);
+  }
+  .logo{font-family:'Cinzel',serif; font-weight:800; font-size:1.1rem; letter-spacing:0.08em; color:var(--bone);}
+  .logo span{color:var(--ember);}
+  .nav-links{display:flex; gap:2.2rem; font-size:0.85rem; letter-spacing:0.04em;}
+  .nav-links a{color:var(--muted); text-decoration:none; transition:color .2s;}
+  .nav-links a:hover{color:var(--crystal); text-decoration:none;}
+  .nav-links a.active{color:var(--ember);}
+
+  .page-header{
+    padding:9rem 6vw 3rem;
+    max-width:900px; margin:0 auto;
+    border-bottom:1px solid var(--stone-line);
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace; font-size:0.75rem; letter-spacing:0.2em;
+    color:var(--ember); text-transform:uppercase; display:block; margin-bottom:1rem;
+  }
+  .page-header h1{font-size:clamp(2rem,4vw,2.8rem); color:var(--bone);}
+  .updated{
+    font-family:'JetBrains Mono',monospace; font-size:0.82rem; color:var(--muted); margin-top:1rem;
+  }
+
+  .layout{
+    max-width:900px; margin:0 auto; padding:3.5rem 6vw 6rem;
+    display:grid; grid-template-columns:200px minmax(0,1fr); gap:3rem;
+  }
+  .toc{
+    position:sticky; top:100px; align-self:start;
+    font-family:'JetBrains Mono',monospace; font-size:0.8rem;
+  }
+  .toc-label{color:var(--muted); letter-spacing:0.15em; text-transform:uppercase; font-size:0.7rem; margin-bottom:1rem; display:block;}
+  .toc a{
+    display:block; color:var(--muted); padding:0.35rem 0; border-left:2px solid var(--stone-line);
+    padding-left:0.8rem; text-decoration:none; transition:all .2s;
+  }
+  .toc a:hover{color:var(--crystal); border-left-color:var(--crystal);}
+
+  .policy-content section{
+    margin-bottom:2.6rem; scroll-margin-top:100px;
+  }
+  .policy-content h2{
+    font-size:1.25rem; color:var(--bone); margin-bottom:1rem;
+    display:flex; align-items:baseline; gap:0.6rem;
+  }
+  .policy-content h2 .num{
+    font-family:'JetBrains Mono',monospace; color:var(--ember); font-size:0.9rem;
+  }
+  .policy-content p{color:var(--muted); line-height:1.75; font-size:0.96rem; margin-bottom:0.9rem;}
+  .policy-content ul{margin:0.8rem 0 0.8rem 1.3rem; color:var(--muted); line-height:1.75; font-size:0.96rem;}
+  .policy-content li{margin-bottom:0.6rem;}
+  .policy-content li strong, .policy-content p strong{color:var(--bone);}
+
+  .callout{
+    background:var(--bg-panel); border:1px solid var(--stone-line); border-left:3px solid var(--ember);
+    border-radius:6px; padding:1.2rem 1.5rem; margin:0 0 2rem;
+  }
+  .callout p{margin-bottom:0; color:var(--bone);}
+
+  .contact-box{
+    background:var(--bg-panel); border:1px solid var(--stone-line); border-radius:6px;
+    padding:1.6rem 1.8rem; margin-top:0.5rem;
+  }
+  .contact-box p{margin-bottom:0; color:var(--bone);}
+  .contact-box a{color:var(--crystal);}
+
+  footer{
+    padding:3rem 6vw; border-top:1px solid var(--stone-line);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;
+    color:var(--muted); font-size:0.85rem; max-width:900px; margin:0 auto;
+  }
+
+  @media(max-width:760px){
+    .layout{grid-template-columns:1fr;}
+    .toc{position:static; margin-bottom:1rem;}
+    .nav-links{gap:1.2rem; font-size:0.78rem;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">RAGE<span>REBIRTH</span></div>
+  <div class="nav-links">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#games">Our Games</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html" class="active">Terms of Service</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <span class="eyebrow">// Legal</span>
+  <h1>Terms of Service</h1>
+  <p class="updated">Last updated: November 4, 2026</p>
+</div>
+
+<div class="layout">
+  <div class="toc">
+    <span class="toc-label">On this page</span>
+    <a href="#acceptance">Acceptance</a>
+    <a href="#eligibility">Eligibility</a>
+    <a href="#license">License to Play</a>
+    <a href="#conduct">Acceptable Use</a>
+    <a href="#purchases">In-App Purchases</a>
+    <a href="#ads">Advertising</a>
+    <a href="#third-party">Third-Party Services</a>
+    <a href="#ip">Intellectual Property</a>
+    <a href="#feedback">Feedback</a>
+    <a href="#availability">Availability</a>
+    <a href="#termination">Termination</a>
+    <a href="#disclaimer">Disclaimer</a>
+    <a href="#liability">Limitation of Liability</a>
+    <a href="#law">Governing Law</a>
+    <a href="#changes">Changes</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="policy-content">
+    <p style="margin-bottom:1.2rem;">These Terms of Service ("Terms") are an agreement between you and RageRebirth ("we," "us," or "our") that governs your download and use of our Android mobile games and related content (the "Apps & Games") available on Google Play. Please read them carefully.</p>
+
+    <div class="callout">
+      <p>By installing or playing our Apps & Games, you agree to these Terms and to our <a href="privacy-policy.html">Privacy Policy</a>. If you do not agree, please do not install or use them.</p>
+    </div>
+
+    <section id="acceptance">
+      <h2><span class="num">01</span> Acceptance of Terms</h2>
+      <p>By downloading, installing, accessing, or using any of our Apps & Games, you confirm that you have read, understood, and agree to be bound by these Terms. These Terms apply in addition to Google Play's Terms of Service, which also govern your download and use of apps from Google Play. If there is a conflict between these Terms and Google Play's terms regarding your use of the store, Google Play's terms prevail for that matter.</p>
+    </section>
+
+    <section id="eligibility">
+      <h2><span class="num">02</span> Eligibility</h2>
+      <p>Our Apps & Games are not intended for users under 16. You must be at least 16 years old (or the minimum age required in your country to consent to the processing of your data, if higher) to use them. If you are between 16 and the age of majority where you live, you confirm that a parent or guardian has reviewed these Terms and agrees to them on your behalf where required by law.</p>
+    </section>
+
+    <section id="license">
+      <h2><span class="num">03</span> License to Play</h2>
+      <p>Subject to these Terms, we grant you a personal, limited, non-exclusive, non-transferable, revocable license to install and use the Apps & Games on Android devices that you own or control, solely for your own non-commercial entertainment.</p>
+      <p>This license does not transfer any ownership of the Apps & Games to you. All rights not expressly granted are reserved by us.</p>
+    </section>
+
+    <section id="conduct">
+      <h2><span class="num">04</span> Acceptable Use</h2>
+      <p>When using the Apps & Games, you agree not to:</p>
+      <ul>
+        <li><strong>Copy, modify, or redistribute</strong> the Apps & Games, or create derivative works from them, except as allowed by law.</li>
+        <li><strong>Reverse engineer, decompile, or disassemble</strong> the Apps & Games, or try to extract source code, except to the extent such restriction is prohibited by applicable law.</li>
+        <li><strong>Cheat or tamper</strong> — use hacks, mods, bots, emulators for unfair advantage, memory editors, or any tool that alters gameplay, scores, leaderboards, or achievements.</li>
+        <li><strong>Interfere with ads or purchases</strong> — block, bypass, or manipulate advertising, in-app purchase flows, or any security or licensing mechanism, including generating fraudulent ad impressions or clicks.</li>
+        <li><strong>Sell or commercially exploit</strong> the Apps & Games, in-game items, or access to them.</li>
+        <li><strong>Violate the law</strong> or the rights of others, or use the Apps & Games for any unlawful purpose.</li>
+        <li><strong>Misuse Play Games features</strong> — such as submitting false scores or abusing leaderboards or achievements.</li>
+      </ul>
+    </section>
+
+    <section id="purchases">
+      <h2><span class="num">05</span> In-App Purchases and Virtual Items</h2>
+      <p>Some of our Apps & Games are free to download but may offer optional in-app purchases, such as removing ads or obtaining in-game items or currency ("Virtual Items").</p>
+      <ul>
+        <li><strong>Processed by Google Play.</strong> All purchases are made and billed through Google Play Billing. We do not receive or store your payment card or billing details.</li>
+        <li><strong>License, not ownership.</strong> Virtual Items have no real-world monetary value and cannot be exchanged for cash or transferred. You receive a limited license to use them within the game they were bought in.</li>
+        <li><strong>Refunds.</strong> Refunds are handled under Google Play's refund policy. Unless required by applicable law, purchases are final once Virtual Items have been delivered. To request a refund, use Google Play's refund process or contact Google Play support.</li>
+        <li><strong>Local data.</strong> Because game progress may be stored only on your device, uninstalling a game, clearing its data, or changing devices may result in loss of progress and Virtual Items. Where a game supports restoring purchases through Google Play, you may use that feature, but we cannot guarantee restoration of all items.</li>
+        <li><strong>Changes.</strong> We may change prices, balance, or the availability of Virtual Items at any time.</li>
+      </ul>
+    </section>
+
+    <section id="ads">
+      <h2><span class="num">06</span> Advertising</h2>
+      <p>Our Apps & Games are supported by advertising. Ads are provided by Google AdMob and its partners. We are not responsible for the content of third-party ads or for any products or services you obtain through them. Any dealings between you and an advertiser are solely between you and that advertiser. How data is used for advertising is described in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    </section>
+
+    <section id="third-party">
+      <h2><span class="num">07</span> Third-Party Services</h2>
+      <p>The Apps & Games rely on third-party services, including Google Play, Google Play Billing, Google Play Games Services, and Google AdMob. Your use of these services is subject to their own terms and policies, and we are not responsible for their availability, performance, or conduct.</p>
+    </section>
+
+    <section id="ip">
+      <h2><span class="num">08</span> Intellectual Property</h2>
+      <p>The Apps & Games, including their code, graphics, characters, artwork, audio, music, text, names, logos, and design, are owned by us or our licensors and are protected by copyright, trademark, and other intellectual property laws. "Rage Rebirth" and related names and logos are our marks. You may not use them without our prior written permission.</p>
+      <p>If you believe content in our Apps & Games infringes your intellectual property rights, please contact us at the address in section 16 with enough detail for us to identify and review the issue.</p>
+    </section>
+
+    <section id="feedback">
+      <h2><span class="num">09</span> Feedback</h2>
+      <p>If you send us suggestions, ideas, or bug reports, you agree that we may use them without restriction or compensation to you. We are under no obligation to act on any feedback.</p>
+    </section>
+
+    <section id="availability">
+      <h2><span class="num">10</span> Updates and Availability</h2>
+      <p>We may update, change, suspend, or discontinue any part of the Apps & Games at any time, including features, content, or the whole game, with or without notice. Some updates may be required to keep playing. We do not guarantee that the Apps & Games will always be available, uninterrupted, or error-free, or that they will work on every device.</p>
+    </section>
+
+    <section id="termination">
+      <h2><span class="num">11</span> Termination</h2>
+      <p>You may stop using the Apps & Games at any time by uninstalling them. We may suspend or end your right to use them immediately, without notice, if you breach these Terms or if we discontinue a game. Upon termination, your license ends and you must stop using and delete the Apps & Games. Sections that by their nature should survive termination (including intellectual property, disclaimer, liability, and governing law) will survive.</p>
+    </section>
+
+    <section id="disclaimer">
+      <h2><span class="num">12</span> Disclaimer of Warranties</h2>
+      <p>The Apps & Games are provided "as is" and "as available," without warranty of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, non-infringement, and uninterrupted or error-free operation. We do not warrant that the Apps & Games will be free of bugs, viruses, or harmful components, or that your progress or purchases will never be lost.</p>
+    </section>
+
+    <section id="liability">
+      <h2><span class="num">13</span> Limitation of Liability</h2>
+      <p>To the fullest extent permitted by applicable law, we will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of data, progress, Virtual Items, profits, or goodwill, arising from or related to your use of, or inability to use, the Apps & Games, including issues caused by third-party services such as Google AdMob, Google Play Billing, or Google Play Games Services.</p>
+      <p>To the extent permitted by law, our total liability to you for any claim relating to the Apps & Games is limited to the amount you paid us, if any, through in-app purchases in the 12 months before the claim arose. Nothing in these Terms excludes or limits liability that cannot be excluded or limited under mandatory law, including your statutory consumer rights.</p>
+    </section>
+
+    <section id="law">
+      <h2><span class="num">14</span> Governing Law and Disputes</h2>
+      <p>These Terms are governed by the laws of India, without regard to conflict-of-law rules. Subject to any mandatory consumer protection laws that give you the right to bring claims in your country of residence, the courts of Hyderabad, Telangana, India will have jurisdiction over disputes arising from these Terms. We encourage you to contact us first so we can try to resolve any issue informally.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">15</span> Changes to These Terms</h2>
+      <p>We may update these Terms from time to time. The date of the current version is shown at the top of this page. If we make material changes, we will take reasonable steps to let you know, such as updating the Google Play listing or showing a notice in the game. By continuing to use the Apps & Games after changes take effect, you accept the updated Terms. If you do not agree, you should stop using them and uninstall.</p>
+      <p>If any provision of these Terms is found unenforceable, the remaining provisions stay in effect. These Terms, together with our Privacy Policy, are the entire agreement between you and us regarding the Apps & Games.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">16</span> Contact Us</h2>
+      <div class="contact-box">
+        <p>Questions about these Terms of Service? Reach us at <a href="mailto:spikycastle@gmail.com">spikycastle@gmail.com</a></p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer>
+  <div>© 2026 Rage Rebirth. All rights reserved.</div>
+  <div><a href="mailto:spikycastle@gmail.com" style="color:var(--muted);">Contact</a></div>
+</footer>
+
+</body>
+</html>
